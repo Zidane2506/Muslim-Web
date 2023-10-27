@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style3.CSS">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Asmaul husna</title>
+</head>
+<body>
+    <header>
+        <img src="images/Logo.png" alt="logo" class="logo">
+        <i class="bx bx-menu-alt-left" id="menu-icon" style="color: rgb(7, 7, 7);"></i>
+
+        <nav class="navBar">
+            <a href="index.html">Jadwal Sholat</a>
+            <a href="asmaulHusna.html">Asmaul Husna</a>
+            <a href="listSurah.html">Al-Qur'an</a>
+        </nav>
+
+        <div class="button">
+            <button class="btn">User</button>
+        </div>
+    </header>
+
+    <section class="awal">
+        <img src="images/awal2.png" alt="" class="gambar">
+    </section>
+
+    <div id="result"></div>
+
+    <script>
+        window.onload = function() {
+            getDataAsma ();
+        }
+        function getDataAsma () {
+            fetch('https://api.aladhan.com/v1/asmaAlHusna')
+            .then(function(response){
+                if (!response.ok) {
+                    throw new Error ('gagal mengambil data')
+                }
+                return response.json();
+            })
+
+            .then(function (asma) {
+                displayDataAsma(asma);
+            })
+            .catch (function (error) {
+                console.log('terjadi kesalah', error);
+            })
+        }
+
+        function displayDataAsma (asma) {
+            let resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = '';
+
+            asma.data.forEach(function (asma) {
+                let asmaDiv = document.createElement("div")
+                asmaDiv.classList.add("kotak")
+
+                let abuDiv = document.createElement("div")
+                abuDiv.classList.add("kecil");
+
+                let nomorAsma = document.createElement("button")
+                nomorAsma.innerHTML = asma.number
+                nomorAsma.classList.add("nomor");
+                let namaAsma = document.createElement("h3")
+                namaAsma.innerHTML =  asma.transliteration;
+                namaAsma.classList.add("nama")
+
+                let gambar = document.createElement("save")
+                gambar.classList.add("save");
+
+                let putihDiv = document.createElement("div") 
+                putihDiv.classList.add("sukses");
+
+                let arabAsma = document.createElement("h2")
+                arabAsma.innerHTML = asma.name;
+                arabAsma.classList.add("arab");
+                
+                let artiAsma = document.createElement("p")
+                artiAsma.innerHTML = "the meaning: " + asma.en.meaning;
+                artiAsma.classList.add("arti");
+
+                let value = document.createElement("p")
+                value.classList.add("line");
+
+                asmaDiv.appendChild(abuDiv)
+                abuDiv.appendChild(nomorAsma)
+                abuDiv.appendChild(namaAsma)
+                abuDiv.appendChild(gambar)
+                asmaDiv.appendChild(putihDiv)
+                putihDiv.appendChild(arabAsma)
+                putihDiv.appendChild(artiAsma)
+                putihDiv.appendChild(value)
+
+                resultDiv.appendChild(asmaDiv);
+            })
+        }
+    </script>
+</body>
+</html>
