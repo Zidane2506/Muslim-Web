@@ -34,8 +34,8 @@ header {
 }
 
 header .logo {
-    width: 100px;
-    height: 90px;
+    width: 150px;
+    height: 96px;
 }
 
 #menu-icon {
@@ -72,8 +72,6 @@ header .logo {
 .awal {
     margin-top: 2rem;
     margin-bottom: 2rem;
-    height: 100%;
-    width: 100%;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -81,7 +79,7 @@ header .logo {
 
 .gambar {
     width: 73rem;
-    height: 17.5rem;
+    height: 24.5rem;
 }
 
 /* Jadwal Sholat */
@@ -232,11 +230,11 @@ header .logo {
     margin-top: 5px;
 }
 
-#result :hover {
+/* #result :hover {
     transform: scale(1.24);
     transition: 0.1s;
     cursor: pointer;
-}
+} */
 
 .ayat {
     margin-top: 5px;
