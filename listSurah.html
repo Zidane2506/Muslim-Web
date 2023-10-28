@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="s2tyle.css">
+    <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Muslim Pro Premium : List Surat</title>
 </head>
 <body>
-    <header>
+    <header class="headerS">
         <img src="images/Logo.png" alt="logo" class="logo">
         <i class="bx bx-menu-alt-left" id="menu-icon" style="color: rgb(7, 7, 7);"></i>
 
@@ -20,12 +20,13 @@
         </nav>
 
         <div class="button">
-            <button class="btn">User</button>
+            <button class="btnS">User</button>
         </div>
     </header>
 
     <section class="awal">
         <img src="images/awal3.png" alt="" class="gambar">
+        <img src="images/3.png" alt="" class="gambarBg">
     </section>
 
     <div id="result"></div>
@@ -61,11 +62,11 @@ function displayData(data) {
         suratDiv.classList.add("kotak");
 
         let abuDiv = document.createElement("div");
-        abuDiv.classList.add("kecil");
+        abuDiv.classList.add("kecilS");
 
         let nomerSurat = document.createElement("button");
         nomerSurat.innerHTML = surat.nomor;
-        nomerSurat.classList.add("nomor");
+        nomerSurat.classList.add("nomorS");
 
         let namaSurat = document.createElement("h3");
         namaSurat.innerHTML = surat.nama;

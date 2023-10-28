@@ -20,7 +20,7 @@ body {
 }
 
 /* NavBar */
-header {
+.headerA {
     position: relative;
     top: 0;
     left: 0;
@@ -51,7 +51,7 @@ header .logo {
     margin-right: 2rem;
 }
 
-.btn {
+.btnA {
     display: inline-block;
     padding: 1rem 2.8rem;
     border-radius: 1rem;
@@ -62,7 +62,7 @@ header .logo {
     cursor: pointer;
 }
 
-.btn:hover {
+.btnA:hover {
     background: rgb(123, 174, 174);
     color: rgb(255, 255, 255);
     transition: color 0.25s, background 0.25s;
@@ -100,7 +100,7 @@ header .logo {
     border-radius: 20px 20px 20px 20px;
 }
 
-.kecil {
+.kecilA {
     width: 18rem;
     border-radius: 20px 20px 0 0;
     background-color: rgb(123, 174, 174);
@@ -111,7 +111,7 @@ header .logo {
     vertical-align: middle;
 }
 
-.nomor {
+.nomorA {
     background-color: rgb(108, 153, 153);
     padding-right: .5rem;
     padding-left: .5rem;
