@@ -78,6 +78,13 @@ header .logo {
     margin-right: 2rem;
 }
 
+.navBar a {
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    font-weight: 500;
+    margin-right: 2rem;
+}
+
 .btn {
     display: inline-block;
     padding: 1rem 2.8rem;

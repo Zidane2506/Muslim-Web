@@ -75,4 +75,4 @@ fetch(jadwalApi)
         tr.appendChild(maghrib)
         tr.appendChild(isya)
     });
-}) 
+})
