@@ -78,11 +78,12 @@ header .logo {
     margin-right: 2rem;
 }
 
-.navBar a {
+.navBar a:hover {
     color: rgb(0, 0, 0);
     font-size: 1rem;
     font-weight: 500;
     margin-right: 2rem;
+    transition: .25s;
 }
 
 .btn {
